@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+      >
+
+</head>
+<body class="min-h-screen">
+    <div class="md:max-w-[360px] sm:max-w-[360px] w-full mx-auto justify-between items-end bg-gray-100 dark:bg-darkClr min-h-full flex flex-col">
+        <div class="p-3 bg-gray-300 flex justify-between items-center mt-2 relative before overflow-hidden rounded-lg w-20 mx-auto">
+            <i class="fa-solid dark:text-white fa-sun-bright cursor-pointer text-black z-[100]" id="sunIcon"></i>
+            <i class="fa-regular dark:text-black font-bold fa-moon-cloud cursor-pointer text-white z-[100]" id="moonIcon"></i>
+        </div>
+        <input type="text" value="0" disabled class="h-[30%] dark:text-gray-100 display bg-transparent text-4xl p-4 text-right rounded-lg mb-4 w-full text-black" id="display"></input>
+        <div class="min-h-[60%] w-full rounded-tl-[2rem] rounded-tr-[2rem] dark:bg-[#292D36] bg-gray-200 bg-opacity-45">
+            <div class="grid grid-cols-4 p-4 gap-4 buttons">
+                <button class="myBtn firstRow" value="AC" onclick="clearDisplay()">AC</button>
+                <button class="myBtn firstRow" value="DE" onclick="deleteDigit()">DE</button>
+                <button class="myBtn firstRow" value="." onclick="calculate(this.value)">.</button>
+                <button class="operation rounded-lg shadow-md shadow-white text-white" value="÷" onclick="calculate(this.value)">÷</button>
+    
+                <button class="myBtn" value="7" onclick="calculate(this.value)">7</button>
+                <button class="myBtn" value="8" onclick="calculate(this.value)">8</button>
+                <button class="myBtn" value="9" onclick="calculate(this.value)">9</button>
+                <button class="operation rounded-lg shadow-md shadow-white text-white" value="×" onclick="calculate(this.value)">×</button>
+    
+                <button class="myBtn" value="4" onclick="calculate(this.value)">4</button>
+                <button class="myBtn" value="5" onclick="calculate(this.value)">5</button>
+                <button class="myBtn" value="6" onclick="calculate(this.value)">6</button>
+                <button class="operation rounded-lg shadow-md shadow-white text-white" value="-" onclick="calculate(this.value)">-</button>
+    
+                <button class="myBtn" value="1" onclick="calculate(this.value)">1</button>
+                <button class="myBtn" value="2" onclick="calculate(this.value)">2</button>
+                <button class="myBtn" value="3" onclick="calculate(this.value)">3</button>
+                <button class="operation rounded-lg shadow-md shadow-white text-white" value="+" onclick="calculate(this.value)">+</button>
+    
+                <button class="myBtn" value="0" onclick="calculate(this.value)">0</button>
+                <button class="myBtn" value="00" onclick="calculate(this.value)">00</button>
+                <button class="operation col-span-2 rounded-lg shadow-md shadow-white text-white" id="ans"> = </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

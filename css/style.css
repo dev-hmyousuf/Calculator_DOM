@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+@layer utilities {
+    .operation {
+        @apply text-red-500 text-4xl font-bold dark:text-red-500 shadow-md dark:shadow-gray-700 dark:bg-[#272B33] font-roboto
+    }
+    .buttons button {
+        @apply text-2xl
+    }
+    .myBtn {
+        @apply  dark:shadow-gray-700 dark:text-white dark:bg-[#272B33] w-16 h-16 bg-gray-300 rounded-2xl font-bold shadow-md font-roboto
+    }
+    
+    .firstRow {
+        @apply text-green-500 dark:text-green-500 font-cursive
+    }
+}
