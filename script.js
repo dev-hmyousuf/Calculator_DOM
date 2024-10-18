@@ -61,7 +61,6 @@ showAns.addEventListener("click", answer)
 const sunIcon = document.getElementById('sunIcon');
 const moonIcon = document.getElementById('moonIcon');
 
-// পেজ লোড হওয়ার সময় থিম চেক করা
 if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.classList.add('dark');
     sunIcon.classList.remove("fa-solid");
@@ -80,7 +79,6 @@ moonIcon.addEventListener('click', () => {
     sunIcon.classList.add("fa-regular");
 });
 
-// সান আইকনে ক্লিক করলে ডার্ক মোড অফ
 sunIcon.addEventListener('click', () => {
     document.documentElement.classList.remove('dark');
     localStorage.setItem('theme', 'light');
